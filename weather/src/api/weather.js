@@ -1,5 +1,4 @@
-import 'dotenv/config';
-const API_KEY = process.env.WEATHERSTACK_API_KEY;
+const API_KEY = import.meta.env.VITE_WEATHERSTACK_API_KEY;
 const API_URL = `http://api.weatherstack.com/current?access_key=${API_KEY}&query=`;
 
 export async function getWeather(city) {
